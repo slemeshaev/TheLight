@@ -16,22 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD6-P6-CCk" userLabel="LightButton">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <connections>
-                                    <action selector="toggleLightTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCt-0O-xLA"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="cD6-P6-CCk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6mY-pr-f70"/>
-                            <constraint firstItem="cD6-P6-CCk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7NO-Ca-FTj"/>
-                            <constraint firstItem="cD6-P6-CCk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="rOe-5l-RxX"/>
-                            <constraint firstAttribute="bottom" secondItem="cD6-P6-CCk" secondAttribute="bottom" id="sQI-j2-qKX"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
