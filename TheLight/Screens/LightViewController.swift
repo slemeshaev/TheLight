@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LightViewController: UIViewController {
     
     // MARK: - Properties
-    private var touchСounter: Int = 0
+    private var isLightOn = false
+    private var touchСounter = 0
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -26,6 +28,30 @@ class LightViewController: UIViewController {
     // MARK: - Interface
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         updateState()
+        isLightOn.toggle()
+        toggleTorch(on: isLightOn)
+    }
+    
+    func toggleTorch(on: Bool) {
+        guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        guard device.hasTorch else {
+            print("Torch isn't available")
+            return
+        }
+        
+        do {
+            try device.lockForConfiguration()
+            device.torchMode = on ? .on : .off
+            
+            // Optional thing you may want when the torch it's on, is to manipulate the level of the torch
+            if on {
+                try device.setTorchModeOn(level: 1.0)
+            }
+            
+            device.unlockForConfiguration()
+        } catch {
+            print("Torch can't be used")
+        }
     }
     
     // MARK: - Internal

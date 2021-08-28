@@ -13,6 +13,9 @@
 		6603390826D9693000527267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6603390726D9693000527267 /* Assets.xcassets */; };
 		6603390B26D9693000527267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6603390926D9693000527267 /* LaunchScreen.storyboard */; };
 		6603391326D969AA00527267 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6603391226D969AA00527267 /* LightViewController.swift */; };
+		6620DD1C26DA377A00671152 /* 2.YellowScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DD1926DA377900671152 /* 2.YellowScreen.png */; };
+		6620DD1D26DA377A00671152 /* 1.RedScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DD1A26DA377900671152 /* 1.RedScreen.png */; };
+		6620DD1E26DA377A00671152 /* 3.GreenScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6620DD1B26DA377A00671152 /* 3.GreenScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6603390A26D9693000527267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6603390C26D9693000527267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6603391226D969AA00527267 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
+		6620DD1926DA377900671152 /* 2.YellowScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.YellowScreen.png; sourceTree = "<group>"; };
+		6620DD1A26DA377900671152 /* 1.RedScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.RedScreen.png; sourceTree = "<group>"; };
+		6620DD1B26DA377A00671152 /* 3.GreenScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.GreenScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,19 @@
 				6603390026D9692D00527267 /* SceneDelegate.swift */,
 				6603390726D9693000527267 /* Assets.xcassets */,
 				6603390C26D9693000527267 /* Info.plist */,
+				6620DD1826DA374B00671152 /* Screenshots */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6620DD1826DA374B00671152 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				6620DD1A26DA377900671152 /* 1.RedScreen.png */,
+				6620DD1926DA377900671152 /* 2.YellowScreen.png */,
+				6620DD1B26DA377A00671152 /* 3.GreenScreen.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6603390B26D9693000527267 /* LaunchScreen.storyboard in Resources */,
+				6620DD1C26DA377A00671152 /* 2.YellowScreen.png in Resources */,
+				6620DD1E26DA377A00671152 /* 3.GreenScreen.png in Resources */,
 				6603390826D9693000527267 /* Assets.xcassets in Resources */,
+				6620DD1D26DA377A00671152 /* 1.RedScreen.png in Resources */,
 				6603390626D9692D00527267 /* LightViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
