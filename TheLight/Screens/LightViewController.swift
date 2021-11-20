@@ -32,7 +32,8 @@ class LightViewController: UIViewController {
         toggleTorch(on: isLightOn)
     }
     
-    func toggleTorch(on: Bool) {
+    // MARK: - Internal
+    private func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         guard device.hasTorch else {
             print("Torch isn't available")
@@ -54,7 +55,6 @@ class LightViewController: UIViewController {
         }
     }
     
-    // MARK: - Internal
     private func updateState() {
         touchСounter += 1
         switch touchСounter {
