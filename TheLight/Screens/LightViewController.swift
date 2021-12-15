@@ -11,6 +11,12 @@ import AVFoundation
 
 class LightViewController: UIViewController {
     
+    enum StateLight: Int {
+        case red = 1
+        case yellow = 2
+        case green = 3
+    }
+    
     // MARK: - Properties
     private var isLightOn = false
     private var touchСounter = 0
@@ -32,7 +38,7 @@ class LightViewController: UIViewController {
         toggleTorch(on: isLightOn)
     }
     
-    // MARK: - Internal
+    // MARK: - Private
     private func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         guard device.hasTorch else {
@@ -44,28 +50,28 @@ class LightViewController: UIViewController {
             try device.lockForConfiguration()
             device.torchMode = on ? .on : .off
             
-            // Optional thing you may want when the torch it's on, is to manipulate the level of the torch
             if on {
                 try device.setTorchModeOn(level: 1.0)
             }
             
             device.unlockForConfiguration()
         } catch {
-            print("Torch can't be used")
+            print(error.localizedDescription)
         }
     }
     
     private func updateState() {
         touchСounter += 1
-        switch touchСounter {
-        case 1:
+        
+        switch StateLight(rawValue: touchСounter) {
+        case .red:
             view.backgroundColor = .red
-        case 2:
+        case .yellow:
             view.backgroundColor = .yellow
-        case 3:
+        case .green:
             view.backgroundColor = .green
             touchСounter = 0
-        default:
+        case .none:
             break
         }
     }
